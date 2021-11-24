@@ -1,0 +1,17 @@
+resource "aws_instance" "I1"{
+	ami="ami-0279c3b3186e54acd"
+	instance_type ="t2.micro"
+	associate_public_ip_address="true"
+	availability_zone="us-east-1a"
+	key_name ="a"
+	vpc_id =aws_vpc.vpc-o1.id
+	subnet_id=aws_subnet.s3.id
+	tags ={
+		Name="I1"
+	}
+	 vpc_security_group_ids = aws_security_group.sgte
+
+
+
+
+}

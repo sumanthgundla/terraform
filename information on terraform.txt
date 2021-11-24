@@ -1,0 +1,18 @@
+1) service identified
+2) resource name identified
+3) when give user data it will create new instance
+
+4) list        subnets = [aws_subnet.s1.id,aws_subnet.s2.id]
+=================
+5) map string  tags={
+		Name="sgteelb"
+	
+}
+==========================
+6) block--object
+listener listener {
+    		instance_port     = 80
+    		instance_protocol = "http"
+    		lb_port           = 80
+    		lb_protocol       = "http"
+} 		lb_port           = 80  
